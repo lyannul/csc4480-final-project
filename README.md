@@ -12,4 +12,4 @@ The database also allows customers to keep track of their plants' hydration stat
 
 ## Contributors
 
-This project is created by [lyannul](https://github.com/lyannul), Josephine, Ximena, and Amou.
+This project is created by [lyannul](https://github.com/lyannul), [joscheung](https://github.com/joscheung), [Xbecerri](https://github.com/Xbecerri), and [amalwal](https://github.com/amalwal).
