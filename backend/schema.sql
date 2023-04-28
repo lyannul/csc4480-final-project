@@ -13,6 +13,7 @@ CREATE TABLE CUSTOMER(
 	UserName			    varchar2(50)	    NOT NULL,
 	WebPassword			    varchar2(50)	    NOT NULL,
     PRIMARY KEY(CustomerID)
+    
 	);
     
 CREATE TABLE LOCATION(
