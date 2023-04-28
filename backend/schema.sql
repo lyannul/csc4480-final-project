@@ -52,7 +52,7 @@ CREATE TABLE PLANT(
 	PlantID                 Int                 NOT NULL,
     CustomerID			    Int			        NOT NULL,
     PlantType               varchar2(50)        NOT NULL,
-    Height                  Int                 NOT NULL, 
+    Height                  varchar2(15)        NOT NULL, 
     Hydrated                Int                 DEFAULT 0, --where 0 is false/not hydrated
     SunlightStatus          Int                 DEFAULT 0, --where 0 is false/no sunlight
     PRIMARY KEY(PlantID),
