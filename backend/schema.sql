@@ -66,9 +66,9 @@ CREATE TABLE NUMBER_OF(
 	PlantType                varchar2(50)        NOT NULL,
     LocationID               Int                 NOT NULL,
     Quantity                 Int                 NOT NULL,
-    PRIMARY KEY(PlantType,LocationID)
+    PRIMARY KEY(PlantType,LocationID),
     CONSTRAINT			    INV_TYPE_FK	        FOREIGN KEY(PlantType)
-							REFERENCES PLANT_TYPE(TypeName)
+							REFERENCES PLANT_TYPE(TypeName),
     CONSTRAINT			    INV_LOC_FK		    FOREIGN KEY(LocationID)
 							REFERENCES LOCATION(LocationID)
 	);    
