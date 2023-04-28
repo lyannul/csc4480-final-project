@@ -46,26 +46,26 @@ INSERT INTO PLANT_TYPE VALUES
   'Rich, neutral well-draining soil');
 
 INSERT INTO PLANT VALUES 
-  ('123456','70844465','orchid','3-24 in','0','0');
+  ('123456','70844465','Orchid','3-24 in','0','0');
 INSERT INTO PLANT VALUES 
-  ('789101','60665443','cactus','1-96 in','0','0');
+  ('789101','60665443','Cactus','1-96 in','0','0');
 INSERT INTO PLANT VALUES 
-  ('157884','55079372','sunflower','3-10 ft','0','0');
+  ('157884','55079372','Sunflower','3-10 ft','0','0');
 INSERT INTO PLANT VALUES 
-  ('603674','65465615','daffodil','6-30 in','0','0');
+  ('603674','65465615','Daffodil','6-30 in','0','0');
 INSERT INTO PLANT VALUES 
-  ('882346','96251650','tulip','9-24 in','0','0');
+  ('882346','96251650','Tulip','9-24 in','0','0');
 
 INSERT INTO NUMBER_OF VALUES 
-  ('orchid',3,'10');
+  ('Orchid',3,'10');
 INSERT INTO NUMBER_OF VALUES 
-  ('cactus',1,'35');
+  ('Cactus',1,'35');
 INSERT INTO NUMBER_OF VALUES 
-  ('sunflower',2,'16');
+  ('Sunflower',2,'16');
 INSERT INTO NUMBER_OF VALUES 
-  ('daffodil',2,'42');
+  ('Daffodil',2,'42');
 INSERT INTO NUMBER_OF VALUES  
-  ('tulip',2,'26');
+  ('Tulip',2,'26');
 
   
   
