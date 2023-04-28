@@ -38,7 +38,7 @@ CREATE TABLE EMPLOYEE(
 CREATE TABLE PLANT_TYPE(
 	TypeName                varchar2(50)        NOT NULL,
     Description             varchar2(50)        NOT NULL,
-    Price			        Int			        NOT NULL,
+    Price			        decimal(10,2)		NOT NULL,
     Color                   varchar2(15)        NOT NULL, 
     LocationID              Int                 NOT NULL,
     WaterNeeds              varchar2(15)        NOT NULL,

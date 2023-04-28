@@ -1,4 +1,5 @@
 /* populating data for greenhouse schema */
+
 INSERT INTO LOCATION VALUES(seqOID.nextVal,'Desert Plants', '0', '90');
 INSERT INTO LOCATION VALUES(seqOID.nextVal,'Lawn Plants', '60', '70');
 INSERT INTO LOCATION VALUES(seqOID.nextVal,'Jungle Plants', '90', '80');
@@ -29,6 +30,7 @@ INSERT INTO EMPLOYEE VALUES
 INSERT INTO EMPLOYEE VALUES
   ('John','C','James','555555500',1);
 
+/* types of plants in the greenhouse */
 INSERT INTO PLANT_TYPE VALUES 
   ('Orchid','DESCRIPTION','3.99','purple',3,'Water weekly',
   'Commercial growing mix');
@@ -45,6 +47,7 @@ INSERT INTO PLANT_TYPE VALUES
   ('Tulip','DESCRIPTION','4.99','orange',2,'Water rarely except immediately after planting and in dry regions',
   'Rich, neutral well-draining soil');
 
+/* individual plants */
 INSERT INTO PLANT VALUES 
   ('123456','70844465','Orchid','3-24 in','0','0');
 INSERT INTO PLANT VALUES 
