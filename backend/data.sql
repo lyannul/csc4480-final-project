@@ -29,31 +29,31 @@ INSERT INTO EMPLOYEE VALUES
 INSERT INTO EMPLOYEE VALUES
   ('John','C','James','555555500',1);
 
-INSERT INTO plant_type VALUES 
+INSERT INTO PLANT_TYPE VALUES 
   ('Orchid','DESCRIPTION','3.99','purple',3,'Water weekly',
   'Commercial growing mix');
-INSERT INTO plant_type VALUES 
+INSERT INTO PLANT_TYPE VALUES 
   ('Cactus','DESCRIPTION','5.99','green',1,'Water every 10 days in summer',
   'Fast draining soil');
-INSERT INTO plant_type VALUES 
+INSERT INTO PLANT_TYPE VALUES 
   ('Sunflower','DESCRIPTION','6.99','yellow',2,'Water regularly',
   'Well-drained soil with organic matter');
-INSERT INTO plant_type VALUES 
+INSERT INTO PLANT_TYPE VALUES 
   ('Daffodil','DESCRIPTION','5.99','yellow', 2,'Water regularly in spring and fall',
   'Well-drained slightly acidic soil');
-INSERT INTO plant_type VALUES 
+INSERT INTO PLANT_TYPE VALUES 
   ('Tulip','DESCRIPTION','4.99','orange',2,'Water rarely except immediately after planting and in dry regions',
   'Rich, neutral well-draining soil');
 
-INSERT INTO plant VALUES 
+INSERT INTO PLANT VALUES 
   ('123456','70844465','orchid','3-24 in','0','0');
-INSERT INTO plant VALUES 
+INSERT INTO PLANT VALUES 
   ('789101','60665443','cactus','1-96 in','0','0');
-INSERT INTO plant VALUES 
+INSERT INTO PLANT VALUES 
   ('157884','55079372','sunflower','3-10 ft','0','0');
-INSERT INTO plant VALUES 
+INSERT INTO PLANT VALUES 
   ('603674','65465615','daffodil','6-30 in','0','0');
-INSERT INTO plant VALUES 
+INSERT INTO PLANT VALUES 
   ('882346','96251650','tulip','9-24 in','0','0');
 
 INSERT INTO NUMBER_OF VALUES 
