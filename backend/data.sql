@@ -30,19 +30,19 @@ INSERT INTO EMPLOYEE VALUES
   ('John','C','James','555555500',1);
 
 INSERT INTO plant_type VALUES 
-  ('Orchid','DESCRIPTION','3.99','purple','seqOID.nextVal','Water weekly',
+  ('Orchid','DESCRIPTION','3.99','purple',3,'Water weekly',
   'Commercial growing mix');
 INSERT INTO plant_type VALUES 
-  ('Cactus','DESCRIPTION','5.99','green','seqOID.nextVal','Water every 10 days in summer',
+  ('Cactus','DESCRIPTION','5.99','green',1,'Water every 10 days in summer',
   'Fast draining soil');
 INSERT INTO plant_type VALUES 
-  ('Sunflower','DESCRIPTION','6.99','yellow','seqOID.nextVal','Water regularly',
+  ('Sunflower','DESCRIPTION','6.99','yellow',2,'Water regularly',
   'Well-drained soil with organic matter');
 INSERT INTO plant_type VALUES 
-  ('Daffodil','DESCRIPTION','5.99','yellow','seqOID.nextVal','Water regularly in spring and fall',
+  ('Daffodil','DESCRIPTION','5.99','yellow', 2,'Water regularly in spring and fall',
   'Well-drained slightly acidic soil');
 INSERT INTO plant_type VALUES 
-  ('Tulip','DESCRIPTION','4.99','orange','seqOID.nextVal','Water rarely except immediately after planting and in dry regions',
+  ('Tulip','DESCRIPTION','4.99','orange',2,'Water rarely except immediately after planting and in dry regions',
   'Rich, neutral well-draining soil');
 
 INSERT INTO plant VALUES 
@@ -57,15 +57,15 @@ INSERT INTO plant VALUES
   ('882346','96251650','tulip','9-24 in','0','0');
 
 INSERT INTO plant VALUES 
-  ('seqOID.nextVal','orchid','10');
+  ('orchid',3,'10');
 INSERT INTO plant VALUES 
-  ('seqOID.nextVal','cactus','35');
+  ('cactus',1,'35');
 INSERT INTO plant VALUES 
-  ('seqOID.nextVal','sunflower','16');
+  ('sunflower',2,'16');
 INSERT INTO plant VALUES 
-  ('seqOID.nextVal','daffodil','42');
-INSERT INTO plant VALUES 
-  ('seqOID.nextVal','tulip','26');
+  ('daffodil',2,'42');
+INSERT INTO plant VALUES  
+  ('tulip',2,'26');
 
   
   
