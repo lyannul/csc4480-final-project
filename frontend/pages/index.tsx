@@ -1,6 +1,7 @@
 import type { User } from "../interfaces";
 import useSwr from "swr";
 import Link from "next/link";
+import Customers from "../components/Customers";
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
@@ -12,6 +13,7 @@ export default function Index() {
   if (!data) return null;
 
   return (
+    <>
     <ul>
       {data.map((user) => (
         <li key={user.id}>
@@ -21,5 +23,7 @@ export default function Index() {
         </li>
       ))}
     </ul>
+    <Customers />
+    </>
   );
 }
