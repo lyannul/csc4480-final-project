@@ -31,9 +31,6 @@ public class PlantController {
 
     @PutMapping("/{plantId}")
     public void updatePlant(@RequestBody Plant plant, @PathVariable int plantId) {
-        System.out.println("****************************");
-        System.out.println("PlantID = " + plantId);
-        System.out.println("****************************");
         Plant p = plantService.getPlantById(plantId);
         // update the plant object with new values
         p.setHydrated(plant.getHydrated());
