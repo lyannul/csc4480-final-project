@@ -12,6 +12,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import javax.sql.DataSource;
 
 @CrossOrigin
+
 @SpringBootApplication
 public class GreenhouseApplication {
 
@@ -40,5 +41,4 @@ public class GreenhouseApplication {
 			};
 		}
 	}
-
 }
