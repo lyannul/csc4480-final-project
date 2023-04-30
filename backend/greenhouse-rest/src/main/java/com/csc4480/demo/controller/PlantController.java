@@ -31,8 +31,13 @@ public class PlantController {
 
     @PutMapping("/{plantId}")
     public void updatePlant(@RequestBody Plant plant, @PathVariable int plantId) {
-        plant.setPlantID(plantId);
-        plantService.updatePlant(plant);
+        Plant p = plantService.getPlantById(plantId);
+        // update the plant object with new values
+        p.setHydrated(plant.getHydrated());
+        p.setHeight(plant.getHeight());
+        p.setSunlightStatus(plant.getSunlightStatus());
+
+        plantService.updatePlant(p);
     }
 
     @DeleteMapping("/{plantId}")

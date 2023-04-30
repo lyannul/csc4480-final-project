@@ -26,7 +26,7 @@ public class PlantService {
     }
 
     public void updatePlant(Plant plant) {
-        plantRepository.save(plant);
+        plantRepository.update(plant);
     }
 
     public void deletePlant(int plantId) {
