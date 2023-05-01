@@ -23,3 +23,13 @@ export type Plant = {
   hydrated: number;
   sunlightStatus: number;
 };
+
+export type PlantType = {
+  typeName: string;
+  description: string;
+  price: number;
+  color: string;
+  locationID: number;
+  waterNeeds: string;
+  soilType: string;
+};

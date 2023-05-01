@@ -4,8 +4,11 @@ import React, { useState, useEffect } from "react";
 import { RiSunLine, RiCloudFill } from "react-icons/ri";
 import { GiWaterDrop } from "react-icons/gi";
 import { FiXCircle } from "react-icons/fi";
+import { getImage } from "@/utils/getImage";
+import Image from "next/image";
 
 const labels = [
+  "Plant",
   "Plant ID",
   "Customer ID",
   "Plant Type",
@@ -103,22 +106,25 @@ const Plants = () => {
               key={p.plantID}
               className="bg-white border-b dark:bg-gray-900 dark:border-gray-700"
             >
+              <td className="px-6 py-4">
+                <Image src={getImage(p.plantType)} alt="Image of plant" className="w-16 h-16 bg-transparent"/>
+              </td>
               <td className="px-6 py-4">{p.plantID}</td>
               <td className="px-6 py-4">{p.customerID}</td>
               <td className="px-6 py-4">{p.plantType}</td>
               <td className="px-6 py-4">{p.height}</td>
               <td className="px-6 py-4">
                 {p.hydrated ? (
-                  <GiWaterDrop color="blue" size={20}/>
+                  <GiWaterDrop color="blue" size={20} />
                 ) : (
-                  <FiXCircle color="red" size={20}/>
+                  <FiXCircle color="red" size={20} />
                 )}
               </td>
               <td className="px-6 py-4">
                 {p.sunlightStatus ? (
-                  <RiSunLine color="yellow" size={20}/>
+                  <RiSunLine color="yellow" size={20} />
                 ) : (
-                  <RiCloudFill color="grey" size={20}/>
+                  <RiCloudFill color="grey" size={20} />
                 )}
               </td>
               <td className="px-6 py-4 grid grid-cols-2 gap-10">
