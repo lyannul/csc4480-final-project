@@ -1,17 +1,14 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import Employees from '@/components/Employees'
-import Plants from '@/components/Plants'
-
-const inter = Inter({ subsets: ['latin'] })
+import Greenhouse from "@/components/Greenhouse";
+import Layout from "@/components/Layout";
 
 export default function Home() {
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
-      <Employees />
-      <Plants />
-    </main>
-  )
+    <Layout>
+      <main>
+        <section className="min-h-main flex flex-col justify-center items-center">
+          <Greenhouse />
+        </section>
+      </main>
+    </Layout>
+  );
 }
