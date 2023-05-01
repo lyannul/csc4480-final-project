@@ -23,23 +23,22 @@ SELECT PLANT.PlantID, PLANT.PlantType, CUSTOMER.UserName FROM PLANT
 JOIN CUSTOMER ON PLANT.CustomerID = CUSTOMER.CustomerID
 WHERE CUSTOMER.UserName = 'JJam65';
 
-/* Find all orders that contain more than two items and have a total cost of over $50 */
-SELECT o.order_id, o.order_date, o.customer_id, SUM(i.item_price * oi.quantity) AS total_cost
-FROM orders o
-JOIN order_items oi ON o.order_id = oi.order_id
-JOIN items i ON oi.item_id = i.item_id
-GROUP BY o.order_id
-HAVING COUNT(*) > 2 AND total_cost > 50;
+/* Find all orders that contain more than two items and have a total cost of over $20 */
+SELECT o.CustomerID, c.FirstName, c.LastName, SUM(t.price) as total_price_of_orders
+FROM CUSTOMER c
+JOIN PLANT o ON o.CustomerID = c.CustomerID
+JOIN plant_type t ON t.TypeName = o.PlantType
+GROUP BY o.CustomerID, c.FirstName, c.LastName
+HAVING COUNT(*) > 1 AND SUM(t.price) > 10;
 
-/* Find the top 5 customers who have made the most orders */
-SELECT c.customer_id, c.first_name, c.last_name, COUNT(*) AS total_orders
-FROM customers c
-JOIN orders o ON c.customer_id = o.customer_id
-GROUP BY c.customer_id
-ORDER BY total_orders DESC
-LIMIT 5;
+/* Find the top 3 customers who have made the most orders */
+SELECT o.CustomerID, c.FirstName, c.LastName, COUNT(*) AS total_orders
+FROM CUSTOMER c
+JOIN PLANT o ON c.CustomerID = o.CustomerID
+GROUP BY o.CustomerID, c.FirstName, c.LastName
+FETCH FIRST 3 ROWS ONLY;
 
-/* Find the customers who have made an order in every month of 2022 */
+/* Find the customers who have made an order in every month of 2022 
 SELECT c.customer_id, c.first_name, c.last_name
 FROM customers c
 WHERE NOT EXISTS (
@@ -51,4 +50,4 @@ WHERE NOT EXISTS (
     WHERE o.customer_id = c.customer_id AND MONTH(o.order_date) = m.month_number AND YEAR(o.order_date) = 2022
   )
 );
-
+*/

@@ -43,7 +43,7 @@ public class CustomerRepository {
         jdbcTemplate.update(query, id);
     }
 
-    private static class CustomerRowMapper implements RowMapper<Customer> {
+    public static class CustomerRowMapper implements RowMapper<Customer> {
         @Override
         public Customer mapRow(ResultSet rs, int rowNum) throws SQLException {
             Customer customer = new Customer();

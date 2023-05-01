@@ -30,7 +30,7 @@ INSERT INTO EMPLOYEE VALUES
   ('John','C','James','555555500',1);
 
 INSERT INTO plant_type VALUES
-  ('Orchid','DESCRIPTION','3.99','purple',2,'WEEKLY',
+  ('Orchid','DESCRIPTION','7.99','purple',2,'WEEKLY',
   'REGULAR');
 INSERT INTO plant_type VALUES
   ('Cactus','DESCRIPTION','5.99','green',1,'BIWEEKLY',
@@ -47,6 +47,8 @@ INSERT INTO plant_type VALUES
 
 INSERT INTO plant VALUES
   ('123456','70844465','Orchid',10, 0, 0);
+INSERT INTO plant VALUES
+  ('123457','70844465','Orchid',10, 1, 0);
 INSERT INTO plant VALUES
   ('789101','60665443','Cactus',35, 0, 0);
 INSERT INTO plant VALUES

@@ -118,6 +118,7 @@ const Plants = () => {
                   <GiWaterDrop color="blue" size={20} />
                 ) : (
                   <FiXCircle color="red" size={20} />
+
                 )}
               </td>
               <td className="px-6 py-4">
@@ -125,6 +126,7 @@ const Plants = () => {
                   <RiSunLine color="yellow" size={20} />
                 ) : (
                   <RiCloudFill color="grey" size={20} />
+
                 )}
               </td>
               <td className="px-6 py-4 grid grid-cols-2 gap-10">
