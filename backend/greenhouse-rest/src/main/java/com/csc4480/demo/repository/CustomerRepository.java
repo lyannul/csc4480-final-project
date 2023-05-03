@@ -1,7 +1,6 @@
 package com.csc4480.demo.repository;
 
 import com.csc4480.demo.model.Customer;
-import com.csc4480.demo.model.Plant;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;

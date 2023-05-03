@@ -1,6 +1,5 @@
 package com.csc4480.demo.repository;
 
-import com.csc4480.demo.model.Plant;
 import com.csc4480.demo.model.PlantType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
