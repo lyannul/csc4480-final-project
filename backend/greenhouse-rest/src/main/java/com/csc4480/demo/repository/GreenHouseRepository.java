@@ -36,7 +36,7 @@ public class GreenHouseRepository {
     }
 
     public List<PlantType> getInvforAllPlantTypes() {
-        String query = "SELECT TypeName, LocationSector, Quantity FROM NUMBER_OF JOIN LOCATION ON NUMBER_OF.LocationID = LOCATION.LocationID;";
+        String query = "SELECT TypeName, LocationSector, Quantity FROM NUMBER_OF JOIN LOCATION ON NUMBER_OF.LocationID = LOCATION.LocationID";
         return jdbcTemplate.query(query, new PlantTypeRowMapper());
     }
 
