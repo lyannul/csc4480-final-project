@@ -3,10 +3,12 @@ import com.csc4480.demo.model.Customer;
 import com.csc4480.demo.model.Employee;
 import com.csc4480.demo.model.Plant;
 import com.csc4480.demo.model.PlantType;
+import com.csc4480.demo.model.NumberOf;
 import com.csc4480.demo.repository.CustomerRepository.CustomerRowMapper;
 import com.csc4480.demo.repository.EmployeeRepository.EmployeeRowMapper;
 import com.csc4480.demo.repository.PlantRepository.PlantRowMapper;
 import com.csc4480.demo.repository.PlantTypeRepository.PlantTypeRowMapper;
+import com.csc4480.demo.repository.NumberOfRepository.NumberOfRowMapper;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -35,9 +37,9 @@ public class GreenHouseRepository {
         return jdbcTemplate.query(query, new PlantTypeRowMapper());
     }
 
-    public List<PlantType> getInvforAllPlantTypes() {
+    public List<NumberOf> getInvforAllPlantTypes() {
         String query = "SELECT TypeName, LocationSector, Quantity FROM NUMBER_OF JOIN LOCATION ON NUMBER_OF.LocationID = LOCATION.LocationID";
-        return jdbcTemplate.query(query, new PlantTypeRowMapper());
+        return jdbcTemplate.query(query, new NumberOfRowMapper());
     }
 
     public List<Employee> getEmployeeWTemp(int temp) {

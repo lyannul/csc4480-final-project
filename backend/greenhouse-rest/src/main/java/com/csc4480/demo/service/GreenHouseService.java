@@ -3,7 +3,9 @@ package com.csc4480.demo.service;
 import com.csc4480.demo.model.Employee;
 import com.csc4480.demo.model.Customer;
 import com.csc4480.demo.model.Plant;
-import com.csc4480.demo.model.PlantType;
+import com.csc4480.demo.model.PlantType; 
+import com.csc4480.demo.model.NumberOf;
+
 import com.csc4480.demo.repository.GreenHouseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -33,7 +35,7 @@ public class GreenHouseService {
         return greenHouseRepository.getTypePriceDesc();
     }
 
-    public List<PlantType> getInvforAllPlantTypes() throws SQLException
+    public List<NumberOf> getInvforAllPlantTypes() throws SQLException
     {
         return greenHouseRepository.getInvforAllPlantTypes();
     }

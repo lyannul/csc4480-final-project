@@ -2,7 +2,8 @@ package com.csc4480.demo.controller;
 
 import com.csc4480.demo.model.Customer;
 import com.csc4480.demo.model.Employee;
-import com.csc4480.demo.model.PlantType;
+import com.csc4480.demo.model.PlantType; 
+import com.csc4480.demo.model.NumberOf;
 
 import com.csc4480.demo.service.GreenHouseService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,7 +38,7 @@ public class GreenHouseController {
     }
 
     @GetMapping("/plant_type_inventory")
-    public List<PlantType> getInvforAllPlantTypes() throws SQLException
+    public List<NumberOf> getInvforAllPlantTypes() throws SQLException
     {
         return greenHouseService.getInvforAllPlantTypes();
     }

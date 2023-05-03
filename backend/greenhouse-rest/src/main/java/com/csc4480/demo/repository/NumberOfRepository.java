@@ -52,7 +52,7 @@ public class NumberOfRepository {
         jdbcTemplate.update(sql, plantType, locationId);
     }
 
-    private static class NumberOfRowMapper implements RowMapper<NumberOf> {
+    public static class NumberOfRowMapper implements RowMapper<NumberOf> {
         @Override
         public NumberOf mapRow(ResultSet rs, int rowNum) throws SQLException {
             NumberOf numberOf = new NumberOf();
