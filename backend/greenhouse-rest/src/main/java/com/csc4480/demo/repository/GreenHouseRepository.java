@@ -2,10 +2,11 @@ package com.csc4480.demo.repository;
 import com.csc4480.demo.model.Customer;
 import com.csc4480.demo.model.Employee;
 import com.csc4480.demo.model.Plant;
-
+import com.csc4480.demo.model.PlantType;
 import com.csc4480.demo.repository.CustomerRepository.CustomerRowMapper;
 import com.csc4480.demo.repository.EmployeeRepository.EmployeeRowMapper;
 import com.csc4480.demo.repository.PlantRepository.PlantRowMapper;
+import com.csc4480.demo.repository.PlantTypeRepository.PlantTypeRowMapper;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -29,20 +30,15 @@ public class GreenHouseRepository {
         return jdbcTemplate.query(query, new EmployeeRowMapper());
     }
 
-    // tho this should be plant type but i dont see it implemented yet 
-    // aka return List<Plant_Type>
-
-    public List<Plant> getTypePriceDesc() {
+    public List<PlantType> getTypePriceDesc() {
         String query = "SELECT TypeName, Description, Price FROM PLANT_TYPE";
-        return jdbcTemplate.query(query, new PlantRowMapper());
+        return jdbcTemplate.query(query, new PlantTypeRowMapper());
     }
 
-    /*
-    SAME THING HERE
-    Retrieve the quantity of all plant types in each location 
-    SELECT TypeName, LocationSector, Quantity FROM NUMBER_OF 
-    JOIN LOCATION ON NUMBER_OF.LocationID = LOCATION.LocationID;
-    */
+    public List<PlantType> getInvforAllPlantTypes() {
+        String query = "SELECT TypeName, LocationSector, Quantity FROM NUMBER_OF JOIN LOCATION ON NUMBER_OF.LocationID = LOCATION.LocationID;";
+        return jdbcTemplate.query(query, new PlantTypeRowMapper());
+    }
 
     public List<Employee> getEmployeeWTemp(int temp) {
         String query = "SELECT EMPLOYEE.FirstName, EMPLOYEE.LastName, LOCATION.LocationSector FROM EMPLOYEE JOIN LOCATION ON EMPLOYEE.LocationID = LOCATION.LocationID WHERE LOCATION.Temperature >= ?";

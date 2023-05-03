@@ -58,7 +58,7 @@ public class PlantTypeRepository {
         jdbcTemplate.update(sql, args);
     }
 
-    private static class PlantTypeRowMapper implements RowMapper<PlantType> {
+    public static class PlantTypeRowMapper implements RowMapper<PlantType> {
         @Override
         public PlantType mapRow(ResultSet rs, int rowNum) throws SQLException {
             PlantType plantType = new PlantType();
